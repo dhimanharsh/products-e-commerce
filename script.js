@@ -1,7 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router";
 import Header from "./source/Components/Header";
-import HeroComponent from "./source/Components/HeroComponent";
 import Main from "./source/Components/Main";
 import About from "./source/Components/About";
 import Contact from "./source/Components/Contact";
@@ -20,7 +19,6 @@ const Layout = () => {
     return (
       <>
         <Header></Header>
-        <HeroComponent></HeroComponent>
         <Outlet></Outlet>
         <Footer></Footer>
       </>

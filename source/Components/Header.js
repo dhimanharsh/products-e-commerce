@@ -10,9 +10,9 @@ function Header() {
       </nav>
       <nav className="nav-content">
         <ul className="menut">
-          <Link to={'/'}><li>Home</li></Link>
+          <Link to={'/'} ><li>Home</li></Link>
           <Link to={'/about'}><li>About</li></Link>
-          <Link to={'/contact'}><li>Careers</li></Link>
+          <Link to={'/contact'}><li>contact us</li></Link>
         </ul>
       </nav>
       <nav className="nav-btn">
