@@ -6,16 +6,16 @@ import About from "./source/Components/About";
 import Contact from "./source/Components/Contact";
 import ProductDetail from "./source/Components/ProductDetail";
 import Footer from "./source/Components/Footer";
-import { useState } from "react";
+// import { useState } from "react";
 const Layout = () => {
-  const [status, setStatus] = useState(true);
-  window.addEventListener("online", () => {
-    setStatus(true);
-  });
-  window.addEventListener("offline", () => {
-    setStatus(false);
-  });
-  if (status === true) {
+  // const [status, setStatus] = useState(true);
+  // window.addEventListener("online", () => {
+  //   setStatus(true);
+  // });
+  // window.addEventListener("offline", () => {
+  //   setStatus(false);
+  // });
+  // if (status === true) {
     return (
       <>
         <Header></Header>
@@ -23,14 +23,14 @@ const Layout = () => {
         <Footer></Footer>
       </>
     );
-  } else {
-    return <>
-    <div className="offline-page">
-    <h1>Hi there</h1>
-    <span>Try reloading this page or following this link when you are offline</span>
-    </div>
-    </>
-  }
+  // } else {
+  //   return <>
+  //   <div className="offline-page">
+  //   <h1>Hi there</h1>
+  //   <span>Try reloading this page or following this link when you are offline</span>
+  //   </div>
+  //   </>
+  // }
 };
 const route = createBrowserRouter([
   {

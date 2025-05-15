@@ -5,6 +5,7 @@ export default function Main() {
   const [cardData, setcardData] = useState([]);
   const [search, setSearch] = useState([]);
   const [inputData, setInputData] = useState("");
+  // data fetching;
   useEffect(() => {
     async function data() {
       let data = await fetch("https://dummyjson.com/products");
@@ -30,6 +31,7 @@ export default function Main() {
 
 </div>
       <div className="main">
+
         <div className="input-btn">
           {/* search filter*/}
           <input
@@ -52,7 +54,7 @@ export default function Main() {
             search
           </button>
         </div>
-        {/* btn fikters */}
+        {/* filter buttons */}
         <div className="search-btns">
           <button
             onClick={() => {
