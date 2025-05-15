@@ -23,6 +23,9 @@ function Header() {
         >
           {log}
         </button>
+        <button onClick={()=>{
+          document.querySelector('body').style.background = "black"
+        }}>night mode</button>
       </nav>
     </header>
 

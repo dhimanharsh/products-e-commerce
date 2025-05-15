@@ -9,6 +9,9 @@
 * button {
   border: none;
 }
+html{
+  transition: all .4s;
+}
 header {
   display: flex;
   align-items: center;

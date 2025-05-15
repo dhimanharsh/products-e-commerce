@@ -2,14 +2,14 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import ProductCard from "./ProductCard";
 export default function Main() {
-  const [car, setcar] = useState([]);
+  const [cardData, setcardData] = useState([]);
   const [search, setSearch] = useState([]);
   const [inputData, setInputData] = useState("");
   useEffect(() => {
     async function data() {
       let data = await fetch("https://dummyjson.com/products");
       let read = await data.json();
-      setcar(read.products);
+      setcardData(read.products);
       setSearch(read.products);
     }
     data();
@@ -46,7 +46,7 @@ export default function Main() {
               let info = search.filter((e) => {
                 return e.title.toLowerCase().includes(inputData.toLowerCase());
               });
-              setcar(info);
+              setcardData(info);
             }}
           >
             search
@@ -60,7 +60,7 @@ export default function Main() {
               let beauty = search.filter((e) => {
                 return e.category == "beauty";
               });
-              setcar(beauty);
+              setcardData(beauty);
             }}
           >
             Beauty
@@ -72,7 +72,7 @@ export default function Main() {
               let frag = search.filter((e) => {
                 return e.category == "fragrances";
               });
-              setcar(frag);
+              setcardData(frag);
             }}
           >
             fragrances
@@ -84,7 +84,7 @@ export default function Main() {
               let furniture = search.filter((e) => {
                 return e.category == "furniture";
               });
-              setcar(furniture);
+              setcardData(furniture);
             }}
           >
             Furniture
@@ -96,7 +96,7 @@ export default function Main() {
               let groce = search.filter((e) => {
                 return e.category == "groceries";
               });
-              setcar(groce);
+              setcardData(groce);
             }}
           >
             groceries
@@ -105,7 +105,7 @@ export default function Main() {
       </div>
       {/* render card component */}
       <div className="style-the-card">
-        {car.map((e, index) => {
+        {cardData.map((e, index) => {
           return (
          
               <ProductCard key={index} everyCard={e}></ProductCard>
