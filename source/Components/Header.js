@@ -15,18 +15,7 @@ function Header() {
           <Link to={'/contact'}><li>contact us</li></Link>
         </ul>
       </nav>
-      <nav className="nav-btn">
-        <button
-          onClick={() => {
-            log == "Login" ? setLog("Logout") : setLog("Login");
-          }}
-        >
-          {log}
-        </button>
-        <button onClick={()=>{
-          document.querySelector('body').style.background = "black"
-        }}>night mode</button>
-      </nav>
+      
     </header>
 
     {/* // responsive */}
